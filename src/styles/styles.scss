@@ -1,0 +1,131 @@
+$green: #37796C;
+$red:   #CE2211;
+$blue:  #5EBDFC;
+$border-radius:20px;
+
+body{
+    width:100%;
+    background-color:$green;
+}
+
+.content{
+    @include flex-center;
+    width:100%;
+    height: 100vh;
+}
+
+.b-pokedex{
+    width: 80%;
+     max-width: 800px;
+    height: 60vh;
+    max-height: 500px;
+    margin: 0 20px;
+    background-color: $red;
+    padding: 10px;
+    @include display-flex;
+    flex-flow:row;
+    flex-wrap: nowrap;
+    border-radius:$border-radius;
+    box-shadow:#1e1e1e57 1px 1px 18px 7px;
+}
+
+.container{
+    width: 100%;
+   
+    display:grid;
+   
+}
+
+.pagination{
+   
+    margin: 0 10px;
+    border-radius:$border-radius;
+
+    display:grid;
+    grid-template-columns:  repeat(6, 1fr);  
+    align-content: center;
+    .arrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:30px;
+      
+        box-shadow: #383838 0px 0px 5px 0px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        &:active{
+                box-shadow: inset #383838 0px 0px 5px 0px;
+                border-radius: 50%;
+    }
+    }
+    .arrow-next{
+        grid-column:1;
+      
+    }  
+    .arrow-prev{grid-column:6;}      
+}
+
+.container-image{
+    grid-template-columns:  repeat(6, 1fr);    
+    grid-template-rows:     repeat(6, 1fr);
+    border-right: 2px #24242452 solid;
+    .image{
+        grid-row:1/6;
+        grid-column:2/6;
+        margin:10px;
+        background-color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius:$border-radius;
+        box-shadow: inset #dbe3eb 1px 1px 14px 16px;    
+        img{
+        height:200px;
+
+        }
+    }
+    .pagination{
+
+         grid-row:6;
+        grid-column:2/6;
+    }
+}
+
+.container-list{
+     grid-template-columns:  repeat(12, 1fr);    
+    grid-template-rows:     repeat(12, 1fr);
+     .list{
+        grid-row:1/12;
+        grid-column:2/12;
+        margin:10px;
+        display:grid;
+        grid-template-columns:  repeat(2, 1fr);  
+        gap:5px 10px;
+        .item{
+            cursor: pointer;
+            @include flex-center;
+            background-color: white;
+            border-radius: $border-radius;
+            text-align: center;
+            padding: 5px 0px;
+            margin: 0 10px;
+            p:first-letter {
+                display:block;
+                 text-transform: capitalize;
+            }
+            &.active{
+                  box-shadow: inset #852f2fc9 0px 0px 8px 3px;
+            }
+        }
+
+    }
+     .pagination{
+        grid-row:12;
+        grid-column:2/12;
+    }
+
+}
+
