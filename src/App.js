@@ -16,7 +16,7 @@ function App() {
   const { pokemons, handleNextClick, handlePrevClick, isListFetched } =
     useAPI();
 
-  const handleClick = (url) => {
+  const handleNameClick = (url) => {
     fetchData(url, setChosenPokemon);
     setImageNumber(0);
   };
@@ -57,7 +57,7 @@ function App() {
             chosenPokemon={chosenPokemon}
             handleNextClick={handleNextClick}
             handlePrevClick={handlePrevClick}
-            handleClick={handleClick}
+            handleNameClick={handleNameClick}
             isListFetched={isListFetched}
           />
         </div>

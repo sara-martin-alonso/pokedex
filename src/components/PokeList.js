@@ -7,7 +7,7 @@ export default function PokeList(props) {
     pokemons,
     handleNextClick,
     handlePrevClick,
-    handleClick,
+    handleNameClick,
     chosenPokemon,
     isListFetched,
   } = props;
@@ -17,7 +17,7 @@ export default function PokeList(props) {
         <PokeItem
           data={el}
           key={el.name}
-          handleClick={handleClick}
+          handleNameClick={handleNameClick}
           chosenPokemon={chosenPokemon}
         />
       ))
