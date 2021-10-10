@@ -1,8 +1,11 @@
-# Getting Started with Create React App
+# Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React App that fetches data from https://pokeapi.co/api/v2/pokemon
+# Video
 
-## Available Scripts
+![caption](https://github.com/sara-martin-alonso/poke-api/blob/main/pokedex-video.gif)
+
+## Useful Scripts
 
 In the project directory, you can run:
 
@@ -10,5 +13,6 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
 ### `npm build`
 Builds the app for production to the build folder.
