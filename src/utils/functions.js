@@ -1,4 +1,4 @@
-function fetchData(url, setPokemons, setIsFetched) {
+function fetchData(url, setPokemons, setIsFetched = () => {}) {
   setIsFetched(false);
   fetch(url)
     .then((res) => res.json())

@@ -12,13 +12,12 @@ import useImages from './hooks/useImages';
 function App() {
   const [chosenPokemon, setChosenPokemon] = useState([]);
   const [imageNumber, setImageNumber] = useState(0);
-  const [isImageFetched, setIsImageFetched] = useState(false);
 
   const { pokemons, handleNextClick, handlePrevClick, isListFetched } =
     useAPI();
 
   const handleClick = (url) => {
-    fetchData(url, setChosenPokemon, setIsImageFetched);
+    fetchData(url, setChosenPokemon);
     setImageNumber(0);
   };
 
@@ -45,7 +44,7 @@ function App() {
       <div className='b-pokedex'>
         <div className='container container-image'>
           <PokeImageChosen
-            url={chosenPokemon}
+            name={chosenPokemon.name}
             imageNumber={imageNumber}
             handleNextImageClick={handleNextImageClick}
             handlePrevImageClick={handlePrevImageClick}
