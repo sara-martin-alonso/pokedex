@@ -1,9 +1,20 @@
 # Description
 
 React App that fetches data from https://pokeapi.co/api/v2/pokemon
+
+## Features
+
+<ul>
+  <li> Fetch pokemons names
+  <li> Fetch the information of a single pokemon on click and filter to show front images
+  <li> Navigate through images and names
+</ul>
+
 # Video
 
 ![caption](https://github.com/sara-martin-alonso/poke-api/blob/main/pokedex-video.gif)
+
+
 
 ## Useful Scripts
 
